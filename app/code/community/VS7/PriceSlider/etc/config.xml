@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <VS7_PriceSlider>
+            <version>0.1.0</version>
+        </VS7_PriceSlider>
+    </modules>
+    <global>
+        <models>
+            <vs7_priceslider>
+                <class>VS7_PriceSlider_Model</class>
+            </vs7_priceslider>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <insert_price_slider>
+                        <class>VS7_PriceSlider_Model_Observer</class>
+                        <method>insertPriceSlider</method>
+                    </insert_price_slider>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+        </events>
+    </frontend>
+</config>
